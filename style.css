@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    height: 25vh;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+header>h1 {
+    font-size: 100px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: darkcyan;
+}
+
+
+main {
+    height: 100vh;
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+
+}
+
+main section#area-cartelas {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+div#header-cartelas {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    background-color: darkcyan;
+}
+
+#header-cartelas>h3 {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: whitesmoke;
+}
+
+div#header-cartelas>button {
+    height: 50px;
+    width: 120px;
+    background-color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+div#cartela {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    background-color: whitesmoke;
+
+}
+
+main section#area-jogo {
+    display: flex;
+    height: 100%;
+    width: 20%;
+    flex-direction: column;
+    background-color: whitesmoke;
+    border: 3px solid darkcyan;
+}
+
+div#header-jogo {
+    width: 100%;
+    height: 20%;
+    background-color: darkcyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+div#header-jogo>button {
+    height: 50px;
+    width: 120px;
+    background-color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+
+}
+
+#header-jogo>h2 {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: whitesmoke;
+}
+
+div#numeros-sorteados {
+    width: 100%;
+    height: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 300px;
+    height: 300px;
+
+}
+
+th,
+td {
+    border: 1px solid darkcyan;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer {
+    position: static;
+    bottom: 0px;
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    color: darkcyan;
+    border: 2px solid darkcyan;
+}
