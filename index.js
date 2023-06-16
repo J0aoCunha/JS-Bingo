@@ -1,9 +1,9 @@
-var jogadores = [];
-var jogoRolando = false;
+var jogadores = []; // Array para armazenar os jogadores e suas cartelas
+var jogoRolando = false; // Variável para verificar se o jogo está em andamento ou não
 
 function gerarNumerosAleatorios(quantidade, min, max) {
     if (quantidade > (max - min)) {
-        console.log("intervalo insuficiente ...");
+        console.log("Intervalo insuficiente ...");
         return;
     }
 
@@ -56,14 +56,14 @@ function DesenharCartela() {
     jogadores.push(jogador);
     console.log(jogadores);
 
-    var sectionCartela = document.getElementById("area-cartelas");
+    var divCartelas = document.getElementById("cartelas");
 
-    var h3Jogador = document.createElement("h3");
-    h3Jogador.style = "text-align: center; color: black;";
-    h3Jogador.innerText = nomeJogador;
+    var divJogador = document.createElement("div");
+    divJogador.style = "text-align: center; color: black; padding-bottom: 10px; font-size: 35px;";
+    divJogador.innerText = nomeJogador;
 
-    var divCartela = document.getElementById("cartela");
-    divCartela.appendChild(h3Jogador);
+    var divCartela = document.createElement("div");
+    divCartela.appendChild(divJogador);
 
     var tabela = document.createElement('table');
     var thead = document.createElement('thead');
@@ -84,16 +84,16 @@ function DesenharCartela() {
     thead.appendChild(thN);
     thead.appendChild(thG);
     thead.appendChild(thO);
-    divCartela.appendChild(h3Jogador);
+    divCartela.appendChild(divJogador);
 
     for (var i = 0; i < 5; i++) {
         var tr = document.createElement('tr');
         for (var j = 0; j < 5; j++) {
             var td = document.createElement('td');
             if (i === 2 && j === 2) {
-                td.innerText = "X";
+                td.innerText = "X"; // Marca o centro da cartela com um "X"
             } else {
-                td.innerText = cartela[j][i];
+                td.innerText = cartela[j][i]; // Preenche os números da cartela
             }
             tr.appendChild(td);
         }
@@ -102,8 +102,10 @@ function DesenharCartela() {
 
     tabela.appendChild(thead);
     divCartela.appendChild(tabela);
+
+    divCartelas.appendChild(divCartela);
 }
 
 function reiniciarJogo() {
-    jogadores = [];
+    jogadores = []; // Limpa o array de jogadores para reiniciar o jogo
 }
