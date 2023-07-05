@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 20vh;
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: darkcyan;
+}
+
+header h1 {
+    font-size: 60px;
+    font-family: sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+
+section#area_cartelas {
+    width: 70vw;
+    height: 75vh;
+    background-color: whitesmoke;
+    border: 0.5px solid darkcyan;
+}
+
+section#area_numeros {
+    width: 30%;
+    height: 75vh;
+    background-color: whitesmoke;
+    border: 0.5px solid darkcyan;
+}
+
+div#header_cartelas,
+div#header_numeros {
+    width: 100%;
+    height: 20%;
+    background-color: darkcyan;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+div#header_cartelas>h3 {
+    font-size: 40px;
+    color: whitesmoke;
+}
+
+div#body_cartelas {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+div.cartela {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+div.cartela h4 {
+    margin-bottom: 5px;
+}
+
+div#body_numeros {
+    width: 80%;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+div#body_numeros span {
+    background-color: white;
+    color: darkcyan;
+    width: 30px;
+    height: 30px;
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid darkcyan;
+
+}
+
+table,
+th,
+td {
+    border: 1px solid darkcyan;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+
+
+button {
+    width: 115px;
+    height: 50px;
+    background-color: whitesmoke;
+    border: 2px solid whitesmoke;
+    color: darkcyan;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: monospace;
+
+}
+
+button:hover {
+    background-color: darkcyan;
+    border: 2px solid whitesmoke;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+footer {
+    position: static;
+    bottom: 0px;
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    color: darkcyan;
+    border: 1px solid darkcyan;
+}
