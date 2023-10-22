@@ -1,7 +1,7 @@
 //Vetores do jogo
-var jogadores = []
-var numerosSorteados = []
-
+let jogadores = []
+let numerosSorteados = []
+let intervalo;
 //Funçao que ira gerar a Cartela do Bingo
 function desenharCartela(jogador) {
 
@@ -112,7 +112,7 @@ function jogar() {
         return
     }
 
-    const intervalo = setInterval(function () {
+    intervalo = setInterval(function () {
         while (true) {
             var aleatorio = Math.floor(Math.random() * 75 + 1);
             if (!numerosSorteados.includes(aleatorio)) {
@@ -143,4 +143,46 @@ function verificarTabela(sorteado) {
             numeros_cartelas[i].style.backgroundColor = 'lightcyan'
         }
     }
+
+    verificarVencedor();
+}
+
+//Verifica se o jogador ganhou
+
+function verificarVencedor() {
+
+    for (var i = 0; i < jogadores.length; i++) {
+        var cartela = jogadores[i].cartela;
+
+        var contador = 0;
+
+        for (var j = 0; j < cartela.length; j++) {
+            for (var k = 0; k < cartela[j].length; k++) {
+                if (numerosSorteados.includes(cartela[j][k])) {
+                    contador++;
+                }
+            }
+        }
+
+        if (contador == 26) {
+            alert('O jogador ' + jogadores[i].nome + ' ganhou');
+            clearInterval(intervalo);
+        }
+    }
+
+}
+
+
+//Reseta a tabela do bingo
+
+function resetar() {
+    numerosSorteados = [];
+    jogadores = [];
+    const body_numeros = document.getElementById('body_numeros');
+    const body_cartelas = document.getElementById('body_cartelas');
+
+    body_numeros.innerHTML = '';
+    body_cartelas.innerHTML = '';
+
+    clearInterval(intervalo);
 }
