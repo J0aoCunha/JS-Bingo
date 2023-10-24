@@ -164,7 +164,7 @@ function verificarVencedor() {
             }
         }
 
-        if (contador == 26) {
+        if (contador == 25) {
             alert('O jogador ' + jogadores[i].nome + ' ganhou');
             clearInterval(intervalo);
         }
