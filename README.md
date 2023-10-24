@@ -11,5 +11,4 @@ Conforme proposto pela disciplina de Construção de Software para Web, o projet
 
 Durante esse projeto, foi possível praticar a manipulação do DOM com JavaScript e, também, a implementação da lógica do jogo, utilizando condicionais, loops de repetição e o método setInterval.
 
-
-# Incompleto
+Para ver o Bingo acesse [site](https://js-bingo-j0aocunha.netlify.app/)
